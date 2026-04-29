@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopora</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: rgb(174, 115, 115);
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add { background: rgb(214, 147, 22); }
+        .buy { background: rgb(16, 47, 16); color: white; }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Shopora</h2>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div id="loginPage">
+        <h1>Login</h1>
+        <input type="email" id="loginEmail" placeholder="Email"><br>
+        <input type="password" id="loginPassword" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <p>Don't have account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="signupPage" class="hidden">
+        <h1>Sign Up</h1>
+        <input type="email" id="signupEmail" placeholder="Email"><br>
+        <input type="password" id="signupPassword" placeholder="Password"><br>
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- SHOP -->
+    <div id="shopPage" class="hidden">
+        <h2>Products</h2>
+
+        <div class="card">
+            <h4>Phone</h4>
+            <p>₹10,000</p>
+            <button class="add" onclick="addToCart('Phone')">Add to Cart</button>
+            <button class="buy" onclick="buyNow('Phone')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h4>Shoes</h4>
+            <p>₹2,000</p>
+            <button class="add" onclick="addToCart('Shoes')">Add to Cart</button>
+            <button class="buy" onclick="buyNow('Shoes')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h4>Watch</h4>
+            <p>₹1,500</p>
+            <button class="add" onclick="addToCart('Watch')">Add to Cart</button>
+            <button class="buy" onclick="buyNow('Watch')">Buy Now</button>
+        </div>
+
+        <h3>Cart</h3>
+        <ul id="cartList"></ul>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+</div>
+
+<script>
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    let cart = [];
+
+    function showSignup() {
+        document.getElementById("loginPage").classList.add("hidden");
+        document.getElementById("signupPage").classList.remove("hidden");
+    }
+
+    function showLogin() {
+        document.getElementById("signupPage").classList.add("hidden");
+        document.getElementById("loginPage").classList.remove("hidden");
+    }
+
+    function signup() {
+        let email = document.getElementById("signupEmail").value;
+        let password = document.getElementById("signupPassword").value;
+
+        users.push({ email, password });
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Signup Successful!");
+        showLogin();
+    }
+
+    function login() {
+        let email = document.getElementById("loginEmail").value;
+        let password = document.getElementById("loginPassword").value;
+
+        let user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            alert("Login Successful!");
+            document.getElementById("loginPage").classList.add("hidden");
+            document.getElementById("shopPage").classList.remove("hidden");
+        } else {
+            alert("Invalid Credentials!");
+        }
+    }
+
+    function addToCart(item) {
+        cart.push(item);
+        displayCart();
+    }
+
+    function buyNow(item) {
+        alert(item + " purchased successfully!");
+    }
+
+    function displayCart() {
+        let cartList = document.getElementById("cartList");
+        cartList.innerHTML = "";
+
+        cart.forEach(item => {
+            let li = document.createElement("li");
+            li.innerText = item;
+            cartList.appendChild(li);
+        });
+    }
+
+    function logout() {
+        document.getElementById("shopPage").classList.add("hidden");
+        document.getElementById("loginPage").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>

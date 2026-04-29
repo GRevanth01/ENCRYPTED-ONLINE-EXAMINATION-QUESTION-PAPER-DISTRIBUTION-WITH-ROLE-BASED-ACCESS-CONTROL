@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage Papers - SecureExam{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="{{ url_for('ea.dashboard') }}">
+            <i class="fas fa-shield-alt me-2"></i>SecureExam Admin
+        </a>
+        <div class="navbar-nav ms-auto d-flex flex-row gap-3">
+            <span class="nav-link">
+                <i class="fas fa-user me-1"></i>{{ session.user_name }}
+            </span>
+            <a class="nav-link" href="{{ url_for('auth.logout') }}">
+                <i class="fas fa-sign-out-alt me-1"></i>Logout
+            </a>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 px-0">
+            <div class="sidebar py-4">
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="{{ url_for('ea.dashboard') }}">
+                        <i class="fas fa-tachometer-alt"></i>Dashboard
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.create_paper') }}">
+                        <i class="fas fa-file-alt"></i>Create Paper
+                    </a>
+                    <a class="nav-link active" href="{{ url_for('ea.manage_papers') }}">
+                        <i class="fas fa-folder-open"></i>Manage Papers
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.manage_keys') }}">
+                        <i class="fas fa-key"></i>RSA Keys
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.authorize_faculty') }}">
+                        <i class="fas fa-user-check"></i>Authorize Faculty
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.access_logs') }}">
+                        <i class="fas fa-history"></i>Access Logs
+                    </a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="col-lg-10 py-4 px-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center">
+                    <div class="icon-circle rose me-3">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div>
+                        <h2 class="fw-bold mb-0" style="color: var(--rose-deep);">Manage Question Papers</h2>
+                        <p class="text-muted mb-0">View and manage all encrypted question papers</p>
+                    </div>
+                </div>
+                <a href="{{ url_for('ea.create_paper') }}" class="btn btn-primary">
+                    <i class="fas fa-plus me-2"></i>Create New Paper
+                </a>
+            </div>
+            
+            <div class="card p-4">
+                {% if papers %}
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-bookmark me-1"></i>Exam Name</th>
+                                <th><i class="fas fa-book me-1"></i>Subject</th>
+                                <th><i class="fas fa-calendar me-1"></i>Date</th>
+                                <th><i class="fas fa-clock me-1"></i>Duration</th>
+                                <th><i class="fas fa-star me-1"></i>Marks</th>
+                                <th><i class="fas fa-lock me-1"></i>Status</th>
+                                <th><i class="fas fa-cog me-1"></i>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for paper in papers %}
+                            <tr>
+                                <td class="fw-semibold">{{ paper.exam_name }}</td>
+                                <td>{{ paper.subject }}</td>
+                                <td>{{ paper.exam_date }}</td>
+                                <td>{{ paper.exam_duration }} min</td>
+                                <td>{{ paper.total_marks }}</td>
+                                <td>
+                                    <span class="encryption-badge locked">
+                                        <i class="fas fa-lock"></i>Encrypted
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="{{ url_for('ea.edit_paper', paper_id=paper.id) }}" class="btn btn-sm btn-outline-primary me-1" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="{{ url_for('ea.delete_paper', paper_id=paper.id) }}" class="btn btn-sm btn-outline-danger" title="Delete" onclick="return confirm('Are you sure you want to delete this paper?');">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center py-5">
+                    <div class="icon-circle pink mx-auto mb-3" style="width: 80px; height: 80px; font-size: 32px;">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h5 class="fw-bold" style="color: var(--rose-deep);">No Question Papers Yet</h5>
+                    <p class="text-muted">Create your first encrypted question paper to get started.</p>
+                    <a href="{{ url_for('ea.create_paper') }}" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Create First Paper
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

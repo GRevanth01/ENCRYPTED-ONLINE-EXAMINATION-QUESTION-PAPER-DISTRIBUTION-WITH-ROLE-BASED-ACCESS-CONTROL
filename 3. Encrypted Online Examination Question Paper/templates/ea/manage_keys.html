@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block title %}RSA Keys - SecureExam{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="{{ url_for('ea.dashboard') }}">
+            <i class="fas fa-shield-alt me-2"></i>SecureExam Admin
+        </a>
+        <div class="navbar-nav ms-auto d-flex flex-row gap-3">
+            <span class="nav-link">
+                <i class="fas fa-user me-1"></i>{{ session.user_name }}
+            </span>
+            <a class="nav-link" href="{{ url_for('auth.logout') }}">
+                <i class="fas fa-sign-out-alt me-1"></i>Logout
+            </a>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 px-0">
+            <div class="sidebar py-4">
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="{{ url_for('ea.dashboard') }}">
+                        <i class="fas fa-tachometer-alt"></i>Dashboard
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.create_paper') }}">
+                        <i class="fas fa-file-alt"></i>Create Paper
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.manage_papers') }}">
+                        <i class="fas fa-folder-open"></i>Manage Papers
+                    </a>
+                    <a class="nav-link active" href="{{ url_for('ea.manage_keys') }}">
+                        <i class="fas fa-key"></i>RSA Keys
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.authorize_faculty') }}">
+                        <i class="fas fa-user-check"></i>Authorize Faculty
+                    </a>
+                    <a class="nav-link" href="{{ url_for('ea.access_logs') }}">
+                        <i class="fas fa-history"></i>Access Logs
+                    </a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="col-lg-10 py-4 px-4">
+            <div class="d-flex align-items-center mb-4">
+                <div class="icon-circle rose me-3">
+                    <i class="fas fa-key"></i>
+                </div>
+                <div>
+                    <h2 class="fw-bold mb-0" style="color: var(--rose-deep);">RSA Key Management</h2>
+                    <p class="text-muted mb-0">Generate and manage RSA encryption keys</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="card p-4">
+                        <h5 class="fw-bold mb-4">
+                            <i class="fas fa-plus-circle me-2 text-danger"></i>Generate New Key Pair
+                        </h5>
+                        <form method="POST" action="{{ url_for('ea.manage_keys') }}">
+                            <input type="hidden" name="action" value="generate">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="fas fa-tag me-2 text-danger"></i>Key Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" name="key_name" class="form-control" required placeholder="e.g., Exam2024_Key">
+                            </div>
+                            <div class="alert alert-info py-2 mb-3">
+                                <small>
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    A new RSA-2048 bit key pair will be generated. The new key will become the active key.
+                                </small>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-key me-2"></i>Generate RSA Key Pair
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="card p-4">
+                        <h5 class="fw-bold mb-4">
+                            <i class="fas fa-list me-2 text-danger"></i>Existing Keys
+                        </h5>
+                        
+                        {% if keys %}
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><i class="fas fa-tag me-1"></i>Key Name</th>
+                                        <th><i class="fas fa-calendar me-1"></i>Created</th>
+                                        <th><i class="fas fa-check-circle me-1"></i>Status</th>
+                                        <th><i class="fas fa-cog me-1"></i>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for key in keys %}
+                                    <tr>
+                                        <td class="fw-semibold">{{ key.key_name }}</td>
+                                        <td class="small">{{ key.created_at }}</td>
+                                        <td>
+                                            {% if key.is_active %}
+                                            <span class="badge-active">
+                                                <i class="fas fa-check me-1"></i>Active
+                                            </span>
+                                            {% else %}
+                                            <span class="text-muted small">Inactive</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <a href="{{ url_for('ea.download_key', key_id=key.id, key_type='public') }}" class="btn btn-sm btn-outline-primary me-1" title="Download Public Key">
+                                                <i class="fas fa-download"></i> Pub
+                                            </a>
+                                            <a href="{{ url_for('ea.download_key', key_id=key.id, key_type='private') }}" class="btn btn-sm btn-outline-danger me-1" title="Download Private Key">
+                                                <i class="fas fa-download"></i> Priv
+                                            </a>
+                                            {% if not key.is_active %}
+                                            <form method="POST" action="{{ url_for('ea.manage_keys') }}" class="d-inline">
+                                                <input type="hidden" name="action" value="activate">
+                                                <input type="hidden" name="key_id" value="{{ key.id }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-success" title="Activate">
+                                                    <i class="fas fa-check"></i>
+                                                </button>
+                                            </form>
+                                            <form method="POST" action="{{ url_for('ea.manage_keys') }}" class="d-inline">
+                                                <input type="hidden" name="action" value="delete">
+                                                <input type="hidden" name="key_id" value="{{ key.id }}">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete" onclick="return confirm('Delete this key?');">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        {% else %}
+                        <div class="text-center py-4">
+                            <div class="icon-circle pink mx-auto mb-3" style="width: 60px; height: 60px; font-size: 24px;">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h6 class="fw-bold" style="color: var(--rose-deep);">No Keys Generated</h6>
+                            <p class="text-muted small">Generate your first RSA key pair to start encrypting papers.</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-4 mt-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-info-circle me-2 text-danger"></i>About RSA Encryption
+                </h5>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-circle pink me-3" style="width: 40px; height: 40px; font-size: 16px;">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold">Public Key</h6>
+                                <p class="small text-muted mb-0">Used to encrypt question papers. Can be shared safely.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-circle rose me-3" style="width: 40px; height: 40px; font-size: 16px;">
+                                <i class="fas fa-unlock"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold">Private Key</h6>
+                                <p class="small text-muted mb-0">Used to decrypt papers. Keep this key secure!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-start">
+                            <div class="icon-circle green me-3" style="width: 40px; height: 40px; font-size: 16px;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-semibold">2048-bit Security</h6>
+                                <p class="small text-muted mb-0">Industry-standard encryption strength.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

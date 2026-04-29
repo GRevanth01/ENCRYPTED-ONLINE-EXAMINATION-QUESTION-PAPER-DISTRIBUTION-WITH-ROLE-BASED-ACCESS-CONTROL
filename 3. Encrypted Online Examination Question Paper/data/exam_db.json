@@ -1,0 +1,651 @@
+{
+  "users": {
+    "1": {
+      "id": "cfb8aa83-078a-410c-8d15-d2cf156ff2fb",
+      "full_name": "vamshi python",
+      "email": "vamshi.namani1@gmail.com",
+      "employee_id": "EMP001",
+      "department": "Administration",
+      "designation": "Controller of Examinations",
+      "contact_number": "+919100110505",
+      "office_location": "193",
+      "password_hash": "scrypt:32768:8:1$e1pDnxm0TUYlvseG$9472632de48b134754c99342c9506f391817530d7264ffcda6af2889705c48b9ed75f0d23e6fca9e179896f860641b7f1a6857580882e06daf0eda05b31124d8",
+      "user_type": "EA",
+      "created_at": "2025-12-05 16:51:17",
+      "is_active": true
+    },
+    "2": {
+      "id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "full_name": "vamshi.namani9@gmail.com",
+      "email": "vamshi.namani9@gmail.com",
+      "employee_id": "EMP002",
+      "department": "Computer Science",
+      "designation": "Assistant Controller",
+      "contact_number": "+919100110505",
+      "office_location": "193",
+      "password_hash": "scrypt:32768:8:1$VggGMpvzjZunUiBe$c76415fb9c25a60e6a5e9c21bb1e54a237f4cb560aaf6858458024f73ab2cbd2b05180cf6a9c0a5f778f55a76f3013e68f1c4e9f1a24a4afeaaa41982f5a68b5",
+      "user_type": "EA",
+      "created_at": "2025-12-29 13:27:10",
+      "is_active": true
+    },
+    "3": {
+      "id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "full_name": "vamshi.namani99@gmail.com",
+      "email": "vamshi.namani99@gmail.com",
+      "faculty_id": "FAC002",
+      "department": "Chemistry",
+      "subject_expertise": "vamshi.namani99@gmail.com",
+      "qualification": "MBA",
+      "contact_number": "vamshi.namani99@gmail.com",
+      "experience_years": "9",
+      "password_hash": "scrypt:32768:8:1$wuSZJCr29xSDRQBd$88e830e4c428ca5ce3283558056d0b554391f8f00ad981960070ddc44448f7c489de696c24b2d810b75a36e39825557479d0a0973b2023c0f931c1afa485661c",
+      "user_type": "AEF",
+      "created_at": "2025-12-29 13:30:04",
+      "is_active": true,
+      "is_authorized": true
+    },
+    "4": {
+      "id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "full_name": "Sushanth",
+      "email": "sushanth@college.edu",
+      "employee_id": "EMP041",
+      "department": "Examination Cell",
+      "designation": "Controller of Examinations",
+      "contact_number": "1234567891",
+      "office_location": "Medchal",
+      "password_hash": "scrypt:32768:8:1$MhLOH82SwzcUBIuF$46361f84036070961fca9e88247ee8d4827f47c692fde58d0a7bd66ed9d00db074126fab7ebc267f61f05b45cb9742be61a429a2edc821044d0c699bf723827a",
+      "user_type": "EA",
+      "created_at": "2026-03-30 10:49:18",
+      "is_active": true
+    },
+    "5": {
+      "id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "full_name": "Avinash",
+      "email": "avinash@college.edu",
+      "faculty_id": "FAC004",
+      "department": "Computer Science",
+      "subject_expertise": "Java",
+      "qualification": "M.Tech",
+      "contact_number": "1234567892",
+      "experience_years": "4",
+      "password_hash": "scrypt:32768:8:1$tbhtxjdpruXiQL3M$abf5586afad7761563fd05897eeec0af8b2a329535c5293ab575c817460da4c78a096fec9ea63d340d7a1d5fd5a229396176fd3f72bb87d0b7194ceef184927a",
+      "user_type": "AEF",
+      "created_at": "2026-03-30 10:50:02",
+      "is_active": true,
+      "is_authorized": true
+    }
+  },
+  "access_logs": {
+    "1": {
+      "id": "6bd16e85-012a-437e-a5ba-9c2fb2b9d9cb",
+      "user_id": "cfb8aa83-078a-410c-8d15-d2cf156ff2fb",
+      "user_type": "EA",
+      "action": "SIGNUP",
+      "details": "New EA registered: vamshi.namani1@gmail.com",
+      "timestamp": "2025-12-05 16:51:17"
+    },
+    "2": {
+      "id": "9c9f4952-6f42-4c2b-9bcd-37fa77d1637f",
+      "user_id": "cfb8aa83-078a-410c-8d15-d2cf156ff2fb",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: vamshi.namani1@gmail.com",
+      "timestamp": "2025-12-05 17:00:59"
+    },
+    "3": {
+      "id": "c0c8a4ed-4a9a-40de-a6e8-ef9e16e70ffc",
+      "user_id": "cfb8aa83-078a-410c-8d15-d2cf156ff2fb",
+      "user_type": "EA",
+      "action": "GENERATE_KEY",
+      "details": "Generated new RSA key pair: 198",
+      "timestamp": "2025-12-05 17:01:29"
+    },
+    "4": {
+      "id": "d826759a-bc18-461a-876d-b37b722573ee",
+      "user_id": "cfb8aa83-078a-410c-8d15-d2cf156ff2fb",
+      "user_type": "EA",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-05 17:01:33"
+    },
+    "5": {
+      "id": "743a2683-6407-4844-b8a9-39e792f50f2f",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "SIGNUP",
+      "details": "New EA registered: vamshi.namani9@gmail.com",
+      "timestamp": "2025-12-29 13:27:10"
+    },
+    "6": {
+      "id": "e8facfe6-a004-4f79-b93f-0dc2a4fa08d7",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: vamshi.namani9@gmail.com",
+      "timestamp": "2025-12-29 13:27:15"
+    },
+    "7": {
+      "id": "76e0310d-073d-4aa1-8ea5-535e8c7768fd",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "CREATE_PAPER",
+      "details": "Created encrypted paper: DS",
+      "timestamp": "2025-12-29 13:27:47"
+    },
+    "8": {
+      "id": "bbc02b08-0930-4881-9ac9-1941edb212af",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "GENERATE_KEY",
+      "details": "Generated new RSA key pair: Hi",
+      "timestamp": "2025-12-29 13:28:05"
+    },
+    "9": {
+      "id": "f3220abe-b61e-49ae-a9fb-4fa089bf4d58",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "ACTIVATE_KEY",
+      "details": "Activated key: ef072e2c-1d54-4eeb-888a-c6d61677297b",
+      "timestamp": "2025-12-29 13:28:47"
+    },
+    "10": {
+      "id": "52ab5e78-1a9c-461d-a4c3-d1fd99f3f1df",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "ACTIVATE_KEY",
+      "details": "Activated key: 644c0038-ffd2-417a-b112-c18e26d8ae3a",
+      "timestamp": "2025-12-29 13:28:49"
+    },
+    "11": {
+      "id": "f76124d8-e7da-45fb-8fff-e69c26922846",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "ACTIVATE_KEY",
+      "details": "Activated key: ef072e2c-1d54-4eeb-888a-c6d61677297b",
+      "timestamp": "2025-12-29 13:28:52"
+    },
+    "12": {
+      "id": "7e2ee467-91e8-4272-9064-970943d738d3",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:29:05"
+    },
+    "13": {
+      "id": "772dfc72-f41b-44a5-a251-3e592eb4253d",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "SIGNUP",
+      "details": "New AEF registered: vamshi.namani99@gmail.com",
+      "timestamp": "2025-12-29 13:30:04"
+    },
+    "14": {
+      "id": "cb19fb7b-8892-449b-8cb0-7800a6f36b86",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "LOGIN",
+      "details": "AEF logged in: vamshi.namani99@gmail.com",
+      "timestamp": "2025-12-29 13:30:11"
+    },
+    "15": {
+      "id": "5477b8fe-f6d5-464e-b32d-f3b12ea835a3",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:30:18"
+    },
+    "16": {
+      "id": "39964cbb-f83a-4636-bcd0-7c9e5b5794cc",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: vamshi.namani9@gmail.com",
+      "timestamp": "2025-12-29 13:30:29"
+    },
+    "17": {
+      "id": "ae56d85d-ca60-4a23-8cf5-4469de42a51e",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty vamshi.namani99@gmail.com for 0 papers",
+      "timestamp": "2025-12-29 13:30:32"
+    },
+    "18": {
+      "id": "0cc51667-194b-4818-b519-b686441a3c96",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:30:42"
+    },
+    "19": {
+      "id": "be66b6eb-b55f-49f2-9dd9-60f5097a122c",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "LOGIN",
+      "details": "AEF logged in: vamshi.namani99@gmail.com",
+      "timestamp": "2025-12-29 13:30:51"
+    },
+    "20": {
+      "id": "b0ce70f9-810b-4874-a12e-ece5922f221d",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 0 authorized exams",
+      "timestamp": "2025-12-29 13:30:53"
+    },
+    "21": {
+      "id": "30dfb80c-0b02-489e-ae98-b7ec5a8428bb",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 0 authorized exams",
+      "timestamp": "2025-12-29 13:30:58"
+    },
+    "22": {
+      "id": "79af07eb-c2b7-4437-9e30-263ae0ec2e42",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 0 authorized exams",
+      "timestamp": "2025-12-29 13:31:01"
+    },
+    "23": {
+      "id": "48e6c83c-52d3-4a69-9db5-838845cf62db",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 0 authorized exams",
+      "timestamp": "2025-12-29 13:31:05"
+    },
+    "24": {
+      "id": "1efa5270-7b47-4513-9297-cfdae3e3f942",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:31:08"
+    },
+    "25": {
+      "id": "844c8763-6de3-49a2-9527-40f5b4eae926",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: vamshi.namani9@gmail.com",
+      "timestamp": "2025-12-29 13:31:14"
+    },
+    "26": {
+      "id": "53870814-b05a-450b-b889-001f0e5e8fa6",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "EDIT_PAPER",
+      "details": "Edited paper: DS",
+      "timestamp": "2025-12-29 13:31:23"
+    },
+    "27": {
+      "id": "acf37341-d999-4a0a-8c38-d13ffec96ec1",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty vamshi.namani99@gmail.com for 0 papers",
+      "timestamp": "2025-12-29 13:31:30"
+    },
+    "28": {
+      "id": "681e64dd-10d1-4640-8424-061d84dc5e56",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty vamshi.namani99@gmail.com for 1 papers",
+      "timestamp": "2025-12-29 13:31:33"
+    },
+    "29": {
+      "id": "44887fc0-fd9c-48c4-a0a3-9a9dd6142e35",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty vamshi.namani99@gmail.com for 1 papers",
+      "timestamp": "2025-12-29 13:31:35"
+    },
+    "30": {
+      "id": "ae41ea31-576b-411c-b1bb-597a12f269ca",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:31:37"
+    },
+    "31": {
+      "id": "65116780-af07-4bb5-90c3-1743a9515b58",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "LOGIN",
+      "details": "AEF logged in: vamshi.namani99@gmail.com",
+      "timestamp": "2025-12-29 13:31:47"
+    },
+    "32": {
+      "id": "8b4fa4be-d6a4-4b46-a3d2-71a47a13ef3d",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 1 authorized exams",
+      "timestamp": "2025-12-29 13:31:49"
+    },
+    "33": {
+      "id": "8b40846e-e360-4d03-9a02-5f6ebe01f7f0",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "DECRYPT_PAPER",
+      "details": "Decrypted paper: DS",
+      "timestamp": "2025-12-29 13:31:52"
+    },
+    "34": {
+      "id": "34c38291-ebc4-490e-a39a-5c261e15d4ef",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "DOWNLOAD_PAPER",
+      "details": "Downloaded paper: DS",
+      "timestamp": "2025-12-29 13:31:55"
+    },
+    "35": {
+      "id": "45266ffb-9cfb-4a9d-bb2e-cde01827abad",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "DOWNLOAD_PAPER",
+      "details": "Downloaded paper: DS",
+      "timestamp": "2025-12-29 13:32:24"
+    },
+    "36": {
+      "id": "3e8381ac-7b00-4387-9a5a-b9618f8b0ffc",
+      "user_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "user_type": "AEF",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:32:38"
+    },
+    "37": {
+      "id": "ed60b9c0-b34e-4cb2-9537-fb335c5e887d",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: vamshi.namani9@gmail.com",
+      "timestamp": "2025-12-29 13:32:50"
+    },
+    "38": {
+      "id": "ae954f0a-3417-437e-bf54-cb3eb6acbfb3",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "DELETE_KEY",
+      "details": "Deleted key: 644c0038-ffd2-417a-b112-c18e26d8ae3a",
+      "timestamp": "2025-12-29 13:33:11"
+    },
+    "39": {
+      "id": "d19db053-4e6c-4b7e-b7fe-6007b378fde1",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "DOWNLOAD_KEY",
+      "details": "Downloaded private key: 198",
+      "timestamp": "2025-12-29 13:40:44"
+    },
+    "40": {
+      "id": "1b42d1ef-7002-4ee6-a3d0-e2fddef0beca",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "DOWNLOAD_KEY",
+      "details": "Downloaded public key: 198",
+      "timestamp": "2025-12-29 13:40:49"
+    },
+    "41": {
+      "id": "e4c84d73-3c80-422c-b706-40c844c57fb9",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "DOWNLOAD_KEY",
+      "details": "Downloaded private key: 198",
+      "timestamp": "2025-12-29 13:40:51"
+    },
+    "42": {
+      "id": "44a20df1-7db7-4f28-8dad-2a925ecf97ba",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: vamshi.namani9@gmail.com",
+      "timestamp": "2025-12-29 13:44:29"
+    },
+    "43": {
+      "id": "7a57c882-ab05-4bb6-b21b-52e402a3beab",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "DOWNLOAD_KEY",
+      "details": "Downloaded private key: 198",
+      "timestamp": "2025-12-29 13:44:35"
+    },
+    "44": {
+      "id": "6dc14e79-d67b-422c-a585-c769002f479e",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "DOWNLOAD_KEY",
+      "details": "Downloaded public key: 198",
+      "timestamp": "2025-12-29 13:44:38"
+    },
+    "45": {
+      "id": "c3c30c81-4acd-4b13-af18-8f3fae065e8a",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty vamshi.namani99@gmail.com for 1 papers",
+      "timestamp": "2025-12-29 13:44:48"
+    },
+    "46": {
+      "id": "d6d49e0d-7466-4011-811f-e5054628a8f0",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty vamshi.namani99@gmail.com for 1 papers",
+      "timestamp": "2025-12-29 13:45:09"
+    },
+    "47": {
+      "id": "257a0d7e-7bc9-4687-baa7-04a17fb5f887",
+      "user_id": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "user_type": "EA",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2025-12-29 13:51:15"
+    },
+    "48": {
+      "id": "f6e11c3d-c6d3-4535-b376-9694fc9cdc0e",
+      "user_id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "user_type": "EA",
+      "action": "SIGNUP",
+      "details": "New EA registered: sushanth@college.edu",
+      "timestamp": "2026-03-30 10:49:18"
+    },
+    "49": {
+      "id": "d870a04c-ab32-4c0e-82a6-4c72ee5560b5",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "SIGNUP",
+      "details": "New AEF registered: avinash@college.edu",
+      "timestamp": "2026-03-30 10:50:02"
+    },
+    "50": {
+      "id": "f6dfbc92-40bc-4897-9551-3eaf4e412a95",
+      "user_id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "user_type": "EA",
+      "action": "LOGIN",
+      "details": "EA logged in: sushanth@college.edu",
+      "timestamp": "2026-03-30 10:50:17"
+    },
+    "51": {
+      "id": "cbf280d1-90a7-4a3f-a8bd-24a12f9699cb",
+      "user_id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "user_type": "EA",
+      "action": "CREATE_PAPER",
+      "details": "Created encrypted paper: Mid Term 2026",
+      "timestamp": "2026-03-30 10:51:13"
+    },
+    "52": {
+      "id": "d719d6be-591a-4796-b427-029828036802",
+      "user_id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "user_type": "EA",
+      "action": "GENERATE_KEY",
+      "details": "Generated new RSA key pair: Mid Term 2026",
+      "timestamp": "2026-03-30 10:51:31"
+    },
+    "53": {
+      "id": "29cf7d30-efa6-483f-b929-dc1f4a2060b9",
+      "user_id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "user_type": "EA",
+      "action": "AUTHORIZE_FACULTY",
+      "details": "Authorized faculty Avinash for 1 papers",
+      "timestamp": "2026-03-30 10:51:57"
+    },
+    "54": {
+      "id": "445d47d5-9be5-4a13-973d-d860f9bd0c84",
+      "user_id": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "user_type": "EA",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2026-03-30 10:52:29"
+    },
+    "55": {
+      "id": "885cbd69-ed83-40d6-99b9-a41e5f620af5",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "LOGIN",
+      "details": "AEF logged in: avinash@college.edu",
+      "timestamp": "2026-03-30 10:52:41"
+    },
+    "56": {
+      "id": "efb7f505-03f5-4e2d-9cc2-de5b6b2a633f",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 1 authorized exams",
+      "timestamp": "2026-03-30 10:52:47"
+    },
+    "57": {
+      "id": "3dcd9588-d1fa-4764-aa54-bd8eddabdef8",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "DECRYPT_PAPER",
+      "details": "Decrypted paper: Mid Term 2026",
+      "timestamp": "2026-03-30 10:52:51"
+    },
+    "58": {
+      "id": "ebe3c091-59cd-458e-b736-a07cb0e1ed17",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "DOWNLOAD_PAPER",
+      "details": "Downloaded paper: Mid Term 2026",
+      "timestamp": "2026-03-30 10:53:00"
+    },
+    "59": {
+      "id": "42c06d16-eb78-4dc3-8f3d-6a7782715117",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 1 authorized exams",
+      "timestamp": "2026-03-30 10:53:20"
+    },
+    "60": {
+      "id": "4a92b269-e998-47df-a89e-6b304d914213",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "DOWNLOAD_PAPER",
+      "details": "Downloaded paper: Mid Term 2026",
+      "timestamp": "2026-03-30 10:53:21"
+    },
+    "61": {
+      "id": "7612464d-416f-41d4-9327-3aeb593045ed",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "VIEW_EXAMS",
+      "details": "Viewed 1 authorized exams",
+      "timestamp": "2026-03-30 10:53:39"
+    },
+    "62": {
+      "id": "d3130f86-bc5a-4447-8940-597e9d47bab0",
+      "user_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "user_type": "AEF",
+      "action": "LOGOUT",
+      "details": "User logged out",
+      "timestamp": "2026-03-30 10:53:42"
+    }
+  },
+  "keys": {
+    "1": {
+      "id": "ef072e2c-1d54-4eeb-888a-c6d61677297b",
+      "key_name": "198",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDg66LGj98/ALcj\nS49ewlMFAUVR6Gep0O/+TVM3V1wBoMQLXx1Qd/sckoMRuaIPAmNoOBJQT5EeuFKj\nL1RyrXgwJ4mXWK0BAOw6GA1dvFbEJmCI5m9sPKX8bX4/Cp/61/6+PA8xFwHP5wR3\nSDYOVZmZa05VVyHXFqgcJNg/NgBcp9iKAQizPI3uOCAkmMsQjcn/oSp/cc9vX9BJ\n1BwCks2cQljqEHLhBhgE/tF0POXcQcaObuwJBTp+tOnG77V+l83zpqj7cq9FAtoQ\nMKrXisMcmsStGQlZMg/O1hLFK0qDy9sAYTSeVqXjwV05li+c5GpxkUyolV7uYdWb\n+YF/C4eDAgMBAAECggEAZyVYmBOpjwR+d/ayUIPwO5baGdZpF7TkImyGkZYD8REv\nZoGfeWQUagV8ixfkzFpNiSFRsLfUdtCTwRc29II94GN5U0lMyW2JZ5jZJFf3OGvb\nEF0Q0wO7IRh7cWCnfgso3UfAtcP1xkiMwUEB3S//SR6vJS7Yq4FN5d41t0NGBjbs\n3ekt/LAZ5pNGOAByEcC0sgOt6AKyOSvIwc6FXeR46gyiAjvvnwg2Sq2aylygBEMW\nSmxE/LdCmar7VV4qehQjx9Ti7YV6yzqNL+JLgkQJVSPP5JFQxR1Oi5dIjUMywPKi\niRc+3Y4mMibE1CiydrKNCdsSegj6l/Z1e7HV6fyEAQKBgQDwnYp65Ns7jKqQeSxB\nFrOhdbGr0ftGgpFGpLp6/fYC8iAp8hFWLrPymvnKidQ2QoSAPc6jIAAjCj1Z9uHo\nP+pu8rZbo2dbNPo74RXDigpE4KuavgJUYlxgV6tWlvPzX950UilX+C02yf80O0D1\no/h5/USZ+hpwywzRUXVmbmiUAQKBgQDvTTIeOS0kAQtMobiCV6CQtvDR7fWaMAaB\nP/K7Ds9JhEETxs+FEPBNkXmpjlK05k0em948Z/jjGKXoTUDwpbD0PbZRn/uM9LWu\nI3UCt4pVq6qARaDdGu7ILCOKYE/UP9mPExasJVRAScUH47KFgnaxdP4sWqBi7DD4\nOn3BNivLgwKBgQDAS6eYf74V4V2PCMgtXI9CwmS0BKTkvQSNiKjgEobB4++Alkz0\nq250vRZUn8JReueZ9ctm4vQ5DL3rYDs6+ZnKAX9rzTOU2MoDgOd71p5OXZ/Hk4MZ\nHWLmPCpakVl1b3DBVchk3ZqE5vpmK9TGe7zhAWAKDq+C5UPhJVDGBAbgAQKBgQCl\n5cSLA2RyA29L7wm1Av7DlLAbOXb9L7IyxJyIZdn6w39CMKAJRhbyD5pim9Jmqwpn\n3/MPuZzoA1xxUa1lp9inWmkc6WZA8B1L3jTub0Ot5NbNGnhNELDdgQwakG6HXMR8\n1eTv7ukbsIix0X8f47RZjhvvr9xk+A1y6UnpOp7d9QKBgQDdOc9gtk26DRQYiJ0N\n+WPLACQORnOXZZZETdKr9c5GFoq6gR4jVWNlBEenlIXDmdG4Vgen87sHFZcnO8dV\n3Mnnpn2ZvI66fR6q1zSZkl5Y4J91b+//eEfIGszxque+aXsRM4uV1ODXgQlgIYCl\nD2z2XbAQWFRD4c3fGrSH1Dg+Mw==\n-----END PRIVATE KEY-----\n",
+      "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4Ouixo/fPwC3I0uPXsJT\nBQFFUehnqdDv/k1TN1dcAaDEC18dUHf7HJKDEbmiDwJjaDgSUE+RHrhSoy9Ucq14\nMCeJl1itAQDsOhgNXbxWxCZgiOZvbDyl/G1+Pwqf+tf+vjwPMRcBz+cEd0g2DlWZ\nmWtOVVch1xaoHCTYPzYAXKfYigEIszyN7jggJJjLEI3J/6Eqf3HPb1/QSdQcApLN\nnEJY6hBy4QYYBP7RdDzl3EHGjm7sCQU6frTpxu+1fpfN86ao+3KvRQLaEDCq14rD\nHJrErRkJWTIPztYSxStKg8vbAGE0nlal48FdOZYvnORqcZFMqJVe7mHVm/mBfwuH\ngwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "created_by": "cfb8aa83-078a-410c-8d15-d2cf156ff2fb",
+      "created_at": "2025-12-05 17:01:29",
+      "is_active": false
+    },
+    "2": {
+      "id": "c94316e1-9dbd-478a-8e7d-4fb2685c0c78",
+      "key_name": "Mid Term 2026",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC97gzthSjp5m+T\nDBg2kJ11B47oO/VJ0K0YQNqLDv8d728lvhdojbjSsPQnIQ7J8jxfp4cBOUdumCCT\ngh0YadPGaG3XoB6rom/OLbC2HpbWGzA72d7HM/o14pKpyDLHjMYHyJ/Fr+xJ/Ke/\ncON2p6UdNHtWoJo9rnqkJPduS7xeEw7kbsfD0skuCuRnwy1f2pO2oPLjIjhGu8Ko\nOtFFUctm+ljzeFmQv+7OYBi9SGwoxa9TqJfY/lWVd+GeyVnPN2/sT7ZdRNFnSdlh\nPD06QKKKcJFDLmk4j6muS24FM+mFcirF3bZ583Jy3wVtrGydZ2UIv8bnCmHMPah7\n/AsdPAlnAgMBAAECggEAAq6hbRtDzCXObo+tqduZ9aShLoNmP+AcCaskyvDvxl7y\nvWA1WWsi8IrCL+lGGbD7jEhD3k8ORLAOSbb9LTKVZIhmALUIqdjV5l370F6XN7fT\nkwzNGhgQUQF9m7sxiGLjCwoYw4Rr/FF+lvQDqlHMwaBTm5ISC4vyvG2vNtYH93Yc\nKaGSbNnMKeRqlK1vu0kmKONpzIrxzLukvZ+cp336/YOhWrC7JZ1vdPIr9SA/+hTB\nfeUkkZdxqEJfR6gL6XTABKip6fZolgV7/djPKMKUDKBBjSjz5uaQbOKYzJM27wkB\n7WmjhtYIwiVzlwY+0J0GKftfbPM5hUz4S6995w1KuQKBgQD5ldXnBriTrO+NjUoL\nj51Ap3YjLFu9/wNNf/UIbVOHXfRX+pOe6XAcH7wiUu5PWgv6CvifM5FxWkh0wvF+\n9bHf2nH9NW4Z39MSSWZSusvNNwW6lbp0w6f9exkAGIBlzPzCjhT1OHwdVAO4j8oV\n1rjk/SgXQuucbHQqhXSiT/tQWQKBgQDCz7U27FcyaL5Eta39PWTk9Y+VOUQ9PTmj\n9+g255WTJXsLiG3VQB1Sge7PvxMiYuwrNxXpOsotedQiTiFGcv5yf32VBgDi1mp3\nD959OAaodX5tunPMqnAWkcpfxSSBk6+krb0neBRH7ofWfEmO1ADaN7OCvc2YR7mP\nfAz8f3jvvwKBgGC0VrHyH7hQbG0rToJWPfbcK+ELAe0HDw+LQbTnL1Mm61Lfay1K\ng77R6QJfoairWjKi55w/zd3evm5HTm0D48y5his29Zce61iNihEKAYddB2I5O4qc\neM21UYWA+Nb46wKzLJmrLiPq9pofVIzLqs5G7K6+pi3ws736AawWU2jZAoGBALAc\ncaf7NEC/6/HVhDrA+6r4SxsNsCDkbm1KucSYyuFBKuEcLp5v3ZIvICLyi2u0nefb\nXpV/rjI6RonUs8QqRNhhZLgJu1dVmt2TnQD6WxqDTQ4JVpIZKkdc+ORnJj91sX1g\nCvXZWgxFGMvPg/f4s+SSIlf5GhmmDZwm+t5wpnWlAoGBAPV3eRrr3YMCFO0+ivu3\n0u643K76xxwd/SsPaLIXBR8l4+0QHLILOYxY4g4aNxC5HB3+g+zs/SlRti/C7fRZ\nY3CBGqa0n8O2K83R7iGRBPVCRWRIauIlXl2uI+12wXzVBTvqDh21ZwagzpVVefft\nVnEzpgocNfsHLtKqDkzDBmeW\n-----END PRIVATE KEY-----\n",
+      "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAve4M7YUo6eZvkwwYNpCd\ndQeO6Dv1SdCtGEDaiw7/He9vJb4XaI240rD0JyEOyfI8X6eHATlHbpggk4IdGGnT\nxmht16Aeq6Jvzi2wth6W1hswO9nexzP6NeKSqcgyx4zGB8ifxa/sSfynv3Djdqel\nHTR7VqCaPa56pCT3bku8XhMO5G7Hw9LJLgrkZ8MtX9qTtqDy4yI4RrvCqDrRRVHL\nZvpY83hZkL/uzmAYvUhsKMWvU6iX2P5VlXfhnslZzzdv7E+2XUTRZ0nZYTw9OkCi\ninCRQy5pOI+prktuBTPphXIqxd22efNyct8FbaxsnWdlCL/G5wphzD2oe/wLHTwJ\nZwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "created_by": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "created_at": "2026-03-30 10:51:31",
+      "is_active": true
+    }
+  },
+  "papers": {
+    "1": {
+      "id": "3c836da2-a37f-4222-9337-8a3abacb56e9",
+      "exam_name": "DS",
+      "subject": "Leg injurity",
+      "exam_date": "2025-12-31",
+      "exam_duration": "189",
+      "total_marks": "100",
+      "encrypted_questions": "8BL9V7wSnoTMdZRi83Gli2o1qOwFlNdwvVgDtNHZb/CRf9ce5iPB/wuYPeanxsProZ5tz5eWmdMDyR9/ZR+Yqb/bR/DDIQ==",
+      "encrypted_key": "3yaQxudY19NdoYjkLZtca5WFkG8KRtOmu6HdZtD5t60u+VrmdVxQZ0liCQpE8ko7s3xV7ukP9ZqdwLr0mLcCJhzTRaaCOZ6bFBpCt/5i5Y/DU/rTCc47j0fvAhbY+wDLLf3LVu6FHEXRvmPxqfL68R40pHBFcaXIfTSneVUujqNZsJlxumlLK++NsX4ydZBIBeD9wNFDrWw4fF/u2n3uEOIrR4SADYIxSSg9aT6mtwTqt/b4Eyxy9G7M0X9vXQI6VO/QKthilhFkAGUOHWpMTVu8cW7ghH6NZS7fULoAjxODUwSwxVcxXmxJLVeeD0X8tiW65eERUBr/bjbFdXxeig==",
+      "encrypted_instructions": "uh3FheLQEzPWKgmntVe5gFr2IwKeEDFxDu0oB6ZoMYevHOP3JiLK/qGvs1+A/t2fTLTkgo4sgDVFDgVUj+xWopDAys4Eg88GmA==",
+      "instructions_key": "ahw/qlJqwXay2/vY7gIBAt6cVriYYLKGZUzIhbZqw4eFGW5ANLWwZbhhET8tRoHASkNczGl9uL+QhmbLQAdzGRdgpgb99/nOx7mHs5zZ65RK+igGOjwImOag7jSrNkcP8AeZePfftIjQ+i09dIHSw4GZPo3Bfb9/pTSOHl55raao4tPqcDzsmsA0CQsuXMi4p7v8T7uEDZJ9g5ac9KxVnR99hO/3jeKdwxJ/mjGVVroZZtQsRmg+J3yPchjbPfKWIREavjlJ04rLDf+Eda1QIsI+J+sos9UFzMWkTidphYjp7Ad6pX5Dc/Ar6yKVuBxJv0vvmQ1kdiOlKOhwiAY1KA==",
+      "key_id": "ef072e2c-1d54-4eeb-888a-c6d61677297b",
+      "created_by": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "created_at": "2025-12-29 13:27:47",
+      "status": "encrypted",
+      "is_active": true,
+      "updated_at": "2025-12-29 13:31:23"
+    },
+    "2": {
+      "id": "04d48f6f-5718-4741-813f-2cdf140fbbed",
+      "exam_name": "Mid Term 2026",
+      "subject": "Java",
+      "exam_date": "2026-03-30",
+      "exam_duration": "180",
+      "total_marks": "100",
+      "encrypted_questions": "xthK75PJXsIbfWltBG//fyVeTEIl7reZZd492mGantgorT0hK6Cu5gfp+lXCmoPTHF2dh4kiMJukkq4RvI/0",
+      "encrypted_key": "suw3IFECJ6XGSzSwAtzWiESuZ4Fe7M8rfb5VpcZDHjCpN2xW9A5yFHcZDSGSwBYW3x0XUnrJ+VE/i1kIbSx3LhRBl+K8AxHMOaeTKQfByVka1iKDZIxAdE2nOelPGqTxxpkY9o0U+k1AYiGO4pnx7TYwx+NHGmeunHCVh4vvwggBENLGJedXLxXNtpwW+kiBQTjRPOaRGtvYpEDJ5L3ckqQOolRfUoc6dwweiMQfjq988pLDKZv5tFkyIUKD48EEK0ZlkZPWW3jAxwxHYYncSUK8r2/1awQ/nxgPn0sI+RfGaCLNYI6sK84qp4mo3DHk8TakNIzOm3B4Je26bm+1Ig==",
+      "encrypted_instructions": "nN06jrUcutZuEt6+nJgRZ/KrnYuI0U6w8qveCf6kL58ke4qob7yE8A==",
+      "instructions_key": "SgGJDanijMmzgiiHP4fXcgC058MHAvxfpSNxfRu3fuJm10kwmLkUJG5jiPOgWPmnUZRPPr94+2onb8/5ya+/D0o1G8tb9W4AjRZBbFikVMkCTlHt2gBh8NNKAnq4hHB5hluZoTy4stWqCsa1iz9W9BxjGxOSWKVlC60flA3zzKkASDGymytg+QN4tGUBAxrhYgA4j8itWXo4rokNGduXlOfZBUyKGP3GTl54Aaxi95Zjw2TB2I+m681/t2m2wulvs+3fIHIaXQfPNoncY31HZRSgMGDcqI2X6KvnRP2FwPivvCcDRy0IyN/i5QIPKt5+YyWzzIJrj+xH7vl1+/1sHA==",
+      "key_id": "ef072e2c-1d54-4eeb-888a-c6d61677297b",
+      "created_by": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "created_at": "2026-03-30 10:51:13",
+      "status": "encrypted",
+      "is_active": true
+    }
+  },
+  "authorizations": {
+    "2": {
+      "id": "f6388cba-1800-4708-935f-0923860da7a5",
+      "faculty_id": "35f1bf9f-c396-4dbb-a788-27bb221af0c4",
+      "paper_id": "3c836da2-a37f-4222-9337-8a3abacb56e9",
+      "authorized_by": "a6bacc94-d9e8-4fbf-b0ea-1d32a9d11e09",
+      "authorized_at": "2025-12-29 13:45:09",
+      "is_active": true
+    },
+    "3": {
+      "id": "9fe61cd9-9dcb-48d3-b862-4f49b8923ba7",
+      "faculty_id": "ef110c78-e5e6-43c9-a52d-504a4c1abaf7",
+      "paper_id": "04d48f6f-5718-4741-813f-2cdf140fbbed",
+      "authorized_by": "6f4de4fc-146c-41b6-a2c8-fa128fb53456",
+      "authorized_at": "2026-03-30 10:51:57",
+      "is_active": true
+    }
+  }
+}
