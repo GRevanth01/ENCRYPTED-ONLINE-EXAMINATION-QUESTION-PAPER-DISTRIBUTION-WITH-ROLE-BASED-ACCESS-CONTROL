@@ -30,7 +30,7 @@ Time lock ensures access only during exam
 All actions are logged and traceable
 
 🛠️ Tech Stack
-Frontend: HTML / CSS / JS (or React)
-Backend: Node.js / Python / Java
-Database: MySQL / MongoDB
-Security: AES/RSA, JWT
+Frontend: HTML / CSS / JS / Bootstrap
+Backend: Node.js /Python
+Database: TinyDB
+Security: AES-GCM/RSA-2048
